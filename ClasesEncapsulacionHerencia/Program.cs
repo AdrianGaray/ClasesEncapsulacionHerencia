@@ -6,6 +6,7 @@ namespace ClasesEncapsulacionHerencia
     {
         static void Main(string[] args)
         {
+
             Book book = new Book("La tempestad","0123456789","Shakespare, Wiliam", "Press");
             ShowPublicationInfo(book);
             book.Publish(new DateTime(2016,8,18));
@@ -18,8 +19,14 @@ namespace ClasesEncapsulacionHerencia
             book3.SetPrice(15, "USD");
             Console.WriteLine($"El precio del libro {book3.Title} es: { book3.Price}");
             Console.WriteLine($"Autor y Titulo: { book3.ToString()}");
-            SetPagesPublicationInfo(book3);
+            SetPagesPublicationInfo(book3);      
 
+            Employee employee = new Employee();
+            employee.FullName = "Sergio Pérez";
+            employee.Age = 40;
+            employee.EmployeeId = 123456;
+            employee.GetData();
+            
             Console.ReadKey();
         }
 
